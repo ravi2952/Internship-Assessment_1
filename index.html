@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assessment</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div class="Dropdown-filter">
+        
+        <form>
+            <!-- Fruit Dropdown -->
+            <label for="fruit">Fruit:</label>
+            <select id="fruit" name="fruit">
+                <option value="">Select a fruit</option>
+                <option value="Apple">Apple</option>
+                <option value="Banana">Banana</option>
+                <option value="Cherry">Cherry</option>
+            </select>
+            
+            <!-- Color Dropdown -->
+            <label for="color">Color:</label>
+            <select id="color" name="color">
+                <option value="">Select a color</option>
+                <option value="Red">Red</option>
+                <option value="Green">Green</option>
+                <option value="Blue">Blue</option>
+            </select>
+
+            <!-- Country Dropdown -->
+            <label for="country">Country:</label>
+            <select id="country" name="country" onchange="updateStates()">
+                <option value="">Select a country</option>
+                <option value="India">India</option>
+                <option value="US">US</option>
+            </select>
+    
+            <!-- State Dropdown -->
+            <label for="state">State:</label>
+            <select id="state" name="state" onchange="updateLocalities()">
+                <option value="">Select a state</option>
+            </select>
+    
+            <!-- Locality Dropdown -->
+            <label for="locality">Locality:</label>
+            <select id="locality" name="locality">
+                <option value="">Select a locality</option>
+            </select>
+    
+            <!-- Buyer Checkbox -->
+            <label for="buyer">Buyer:</label>
+            <input type="checkbox" id="buyer" name="buyer">
+            
+            <!-- Seller Checkbox -->
+            <label for="seller">Seller:</label>
+            <input type="checkbox" id="seller" name="seller">
+            
+            <!-- Filter Button -->
+            <button type="button" onclick="displaySelectedValues()">Filter</button>
+        </form>
+    
+        <!-- Result Table -->
+        <table id="resultTable">
+        </table>
+    </div>
+    
+    <script
+        src="index.js"
+    >
+    </script>
+
+  </body>
+</html>
